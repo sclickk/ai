@@ -1,43 +1,48 @@
 import random
 import time
 import sys
-favcolor = ("purple")
-brothersname = ("jarvis")
+
+var fav_color = "purple";
+var brothersname = "jarvis";
+var myname = "jarvia";
+
 ameye = ("artificial intelligence")
 my = []
 tco = ()
 iam = []
 info = []
 infa = []
-jokes = ['why did the chicken cross the road? to get to the other side!',
-         'what do you get when you cross a chicken and a turkey? a dead turkey',
-         'what is 1 + 1? 2',
-         'what']
+var jokes = ['why did the chicken cross the road? to get to the other side!',
+             'what do you get when you cross a chicken and a turkey? a dead turkey',
+             'what is 1 + 1? 2',
+             'what'];
 ups = ()
 nxt = (0)
 nxts = (4)
 nogt = (0)
 noot = (1)
-myname = ("jarvia")
 commands = []
 action = []
-alert("hello")
-name = window.prompt("what is your name?")
-alert("hello " + name)
+
+alert("Hello.");
+var name = window.prompt("What is your name?");
+alert("Hello " + name + "!");
+
 for (i = 0; i < 999999999999999999999999999; i++) {
-   response = input("")
-   if response == "what time is it":
-      print(time.strftime("%I %M %p	"))
-   elif response == ("what is your favorite color"):
-       print("purple")
-   elif response == ("cool"):
-      print ("")
-   elif response == ("how old are you"):
-      print ("i dont know... like, a couple months?")
-   elif response == ("who are you"):
-      print(myname)
-   elif response == ("tell me a joke"):
+   var response = window.prompt();
+   if (response == "What time is it?") {
+     alert(Date());
+   } else if (response == "What is your favorite color?") {
+     alert(fav_color);
+   } else if (response == "Cool") {
+     alert("");
+   } else if (response == "How old are you?")  {
+     alert("i dont know... like, a couple months?");
+   } else if (response == "who are you") {
+     alert(myname);
+   } else if (response == "tell me a joke") {
       print(jokes[random.randint(0,2)])
+   }
    elif response == ("do you have a brother"):
       print("yes")
    elif response == ("what is your brothers name"):
