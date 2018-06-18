@@ -4,17 +4,12 @@ import sys
 
 Array.prototype.frequencies = function()
 {
-  var l = this.length, result = {all:[]};
-  while (l--) {
-    result[this[l]] = result[this[l]] ? ++result[this[l]] : 1;
+  var counts = {};
+  for(var i = 0; i< this.length; i++) {
+    var num = this[i];
+    counts[num] = counts[num] ? counts[num]+1 : 1;
   }
-  // all pairs (label, frequencies) to an array of arrays(2)
-  for (var l in result) {
-    if (result.hasOwnProperty(l) && l !== 'all') {
-      result.all.push([ l,result[l] ]);
-    }
-  }
-  return result;
+  return counts[item] || 0;
 };
 
 var fav_color = "purple";
