@@ -2,6 +2,21 @@ import random
 import time
 import sys
 
+Array.prototype.frequencies = function()
+{
+  var l = this.length, result = {all:[]};
+  while (l--) {
+    result[this[l]] = result[this[l]] ? ++result[this[l]] : 1;
+  }
+  // all pairs (label, frequencies) to an array of arrays(2)
+  for (var l in result) {
+    if (result.hasOwnProperty(l) && l !== 'all') {
+      result.all.push([ l,result[l] ]);
+    }
+  }
+  return result;
+};
+
 var fav_color = "purple";
 var brothersname = "jarvis";
 var myname = "jarvia";
@@ -90,9 +105,10 @@ for (i = 0; i < 999999999999999999999999999; i++) {
    } else if (response == "what am i") {
       tikr = (iam);
       alert(ups);
-   elif commands.count (response) == 1:
-      spot = commands.index (response)
-      alert(action[spot])
+   } else if (commands.frequencies(response) == 1) {
+      spot = commands.index (response);
+      alert(action[spot]);
+   }
    elif response.substr(0, 2) == ("my"): 
       nxt = 0;
       nxts = 4;
