@@ -1,27 +1,30 @@
 import random
 import time
 import sys
-favcolor= ("purple")
-brothersname=("jarvis")
-ameye=("artificial intelligence")
+favcolor = ("purple")
+brothersname = ("jarvis")
+ameye = ("artificial intelligence")
 my = []
 tco = ()
-iam=[]
+iam = []
 info = []
 infa = []
-jokes = ['why did the chicken cross the road? to get to the other side!','what do you get when you cross a chicken and a turkey? a dead turkey', 'what is 1 + 1? 2', 'what']
+jokes = ['why did the chicken cross the road? to get to the other side!',
+         'what do you get when you cross a chicken and a turkey? a dead turkey',
+         'what is 1 + 1? 2',
+         'what']
 ups = ()
 nxt = (0)
-nxts =(4)
+nxts = (4)
 nogt = (0)
 noot = (1)
 myname = ("jarvia")
 commands = []
 action = []
-print ("hello")
-name = input ("what is your name? ")
-print ("hello " + name)
-for x in range(0, 999999999999999999999999999):
+alert("hello")
+name = window.prompt("what is your name?")
+alert("hello " + name)
+for (i = 0; i < 999999999999999999999999999; i++) {
    response = input("")
    if response == "what time is it":
       print(time.strftime("%I %M %p	"))
@@ -116,19 +119,5 @@ for x in range(0, 999999999999999999999999999):
    if (response) == "yes":
       commands.append(command)
       actionk = input("what should i say in response? ")
-      action.append(actionk)         
-      
-         
-         
-         
-         
-        
-      
-      
-         
-   
-   
-      
-
-
-
+      action.append(actionk)
+}
