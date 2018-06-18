@@ -103,8 +103,7 @@ for (i = 0; i < 999999999999999999999999999; i++) {
    } else if (commands.frequencies(response) == 1) {
       spot = commands.index (response);
       alert(action[spot]);
-   }
-   elif response.substr(0, 2) == ("my"): 
+   } else if (response.substr(0, 2) == "my") { 
       nxt = 0;
       nxts = 4;
       while (response.substr(nxt, nxts) != " is ") {
@@ -135,10 +134,12 @@ for (i = 0; i < 999999999999999999999999999; i++) {
          commands.push("what is " + response.substr(0, jb));
          action.push(response.substr(dk, nxt));
       }
-   else:
-      alert("i dont understand, would you like to add this as a new command? ");
-      command = response
-      response = window.prompt("yes or no ")
+   } else {
+      alert("I dont understand, would you like to add this as a new command?");
+      command = response;
+      response = window.prompt("yes or no ");
+   }
+
    if (response == "yes") {
      commands.append(command)
      actionk = console.prompt("what should i say in response? ");
