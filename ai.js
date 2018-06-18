@@ -128,7 +128,7 @@ for (i = 0; i < 999999999999999999999999999; i++) {
       alert("i dont understand, would you like to add this as a new command? ");
       command = response
       response = window.prompt("yes or no ")
-   if (response == "yes) {
+   if (response == "yes") {
      commands.append(command)
      actionk = console.prompt("what should i say in response? ");
      action.append(actionk);
