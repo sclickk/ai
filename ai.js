@@ -5,6 +5,10 @@ import sys
 var fav_color = "purple";
 var brothersname = "jarvis";
 var myname = "jarvia";
+var jokes = ['why did the chicken cross the road? to get to the other side!',
+             'what do you get when you cross a chicken and a turkey? a dead turkey',
+             'what is 1 + 1? 2',
+             'what'];
 
 ameye = ("artificial intelligence")
 my = []
@@ -12,10 +16,6 @@ tco = ()
 iam = []
 info = []
 infa = []
-var jokes = ['why did the chicken cross the road? to get to the other side!',
-             'what do you get when you cross a chicken and a turkey? a dead turkey',
-             'what is 1 + 1? 2',
-             'what'];
 ups = ()
 nxt = (0)
 nxts = (4)
@@ -23,6 +23,10 @@ nogt = (0)
 noot = (1)
 commands = []
 action = []
+
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 alert("Hello.");
 var name = window.prompt("What is your name?");
@@ -40,23 +44,22 @@ for (i = 0; i < 999999999999999999999999999; i++) {
      alert("i dont know... like, a couple months?");
    } else if (response == "who are you") {
      alert(myname);
-   } else if (response == "tell me a joke") {
-      print(jokes[random.randint(0,2)])
-   }
-   elif response == ("do you have a brother"):
-      print("yes")
-   elif response == ("what is your brothers name"):
-      print("jarvis")
-   elif response == ("who created you"):
-      print("zpit367")
-   elif response == ("what language were you coded in"):
-      print("python")  
+   } else if (response == "Tell me a joke.") {
+     alert(jokes[randomInteger(0, 2)]);
+   } else if (response == "Do you have a brother?") {
+     alert("Wes");
+   } else if (response == "what is your brothers name?") {
+     alert(brothersname);
+   } else if (response == ("who created you")) {
+     alert("zpit367")
+   } else if (response == "what language were you coded in"):
+      print("python")
    elif response == "what is your name":
       print(myname)
    elif response == "what is my name":
       print(name)
    elif response == "give me a random number":
-      print (random.randint(1,100))
+      alert(randomInteger(1, 100))
    elif response == "what is the date":
       print (time.strftime (" %A, %B %e, %Y"))
    elif response == "change name":
@@ -72,16 +75,16 @@ for (i = 0; i < 999999999999999999999999999; i++) {
       print ("jay. a. are. vee. eye. a")
    elif response == "hi":
       print ("hello")
-   elif response == ("hello "+ myname):
+   elif response == ("hello " + myname):
       print("hello " + name)
    elif response == ("hi " + myname):
-      print ("hello " + name) 
+      print ("hello " + name)
    elif response[0:5] == ("i am "):
       nxt = (0)
       nxts = (1)
       while response[nxt:nxts] != (""):
          nxt = (nxt+1)
-         nxts=(nxts+1) 
+         nxts = (nxts+1)
       ups = tco
       ups = (response[5:nxt])
    elif response == "what am i":
@@ -106,7 +109,7 @@ for (i = 0; i < 999999999999999999999999999; i++) {
          nxts =(nxts+1)                 
          while response[nxt:nxts] != (""):
             nxt = (nxt+1)
-            nxts=(nxts+1)                              
+            nxts = (nxts+1)                              
          action.append("your " + cmld)      
          commands.append("who is " + response[dilk:nxts])
       else:
