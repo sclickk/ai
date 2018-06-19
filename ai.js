@@ -38,12 +38,20 @@ function startAI() {
   alert("Hello.");
   var name = window.prompt("What is your name?");
   alert("Hello " + name + "!");
-  
-  for (i = 0; i < 999999999999999999999999999; i++) {
+
+  // This will let us keep the AI running as long as the user wants to.
+  var status = 0;
+
+  while (status == 0) {
     var response = window.prompt();
     if (response == "What time is it?"
      || response == "What is the date?") {
       alert(Date());
+    } else if (response == "Quit.") {
+      confirm = window.prompt("Are you sure?");
+      if (confirm == "Yes") {
+        status = 1;
+      }
     } else if (response == "What is your favorite color?") {
       alert(fav_color);
     } else if (response == "Cool") {
