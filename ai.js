@@ -52,6 +52,7 @@ var nxt = 0,
     action = [];
 
 function startAI() {
+  conversation_history.push("CONVERSATION STARTED AT " + Date());
   notify("Hello.");
   var name = getInput("What is your name?");
   notify("Hello " + name + "!");
@@ -69,6 +70,12 @@ function startAI() {
       if (confirm == "Yes") {
         status = 1;
       }
+    } else if (response == "Show me the conversation history") {
+      var conv_out = "";
+      for (i = 0; i < conversation_history.length; i++) {
+        conv_out = conv_out + "\n" + conversation_history[i];
+      }
+      notify(conv_out);
     } else if (response == "What is your favorite color?") {
       notify(fav_color);
     } else if (response == "Cool") {
@@ -167,5 +174,9 @@ function startAI() {
       actionk = window.prompt("what should i say in response? ");
       action.push(actionk);
     }
+
+    conversation_history = [];
   }
+
+  conversation_history = [];
 }
