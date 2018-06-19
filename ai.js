@@ -27,7 +27,7 @@ function getInput(prompt_text)
 {
   conversation_history.push("Out: " + prompt_text);
   var prompt_window = window.prompt(prompt_text);
-  conversation_history.push("In" + prompt_window);
+  conversation_history.push("In: " + prompt_window);
   return prompt_window;
 }
 
