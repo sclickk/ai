@@ -17,20 +17,18 @@ var jokes = ['why did the chicken cross the road? to get to the other side!',
              'what do you get when you cross a chicken and a turkey? a dead turkey',
              'what is 1 + 1? 2',
              'what'];
-
-ameye = ("artificial intelligence")
-my = []
-tco = ()
-iam = []
-info = []
-infa = []
-ups = ()
-nxt = (0)
-nxts = (4)
-nogt = (0)
-noot = (1)
-commands = []
-action = []
+var my = [];
+var tco = null;
+var iam = [];
+var info = [];
+var infa = [];
+var ups = null;
+var nxt = 0,
+    nxts = 4,
+    nogt = 0,
+    noot = 1,
+    commands = [],
+    action = [];
 
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -60,7 +58,7 @@ function startAI() {
       alert("Wes");
     } else if (response == "what is your brothers name?") {
       alert(brothersname);
-    } else if (response == ("who created you")) {
+    } else if (response == "Who created you?") {
       alert("zpit367")
     } else if (response == "what language were you coded in") {
       alert("python");
@@ -74,9 +72,9 @@ function startAI() {
       alert("what would you like to change the name to")
       myname = window.prompt("new name: ")
     } else if (response == "change my name") {
-      print("what would you like to change your name to");
-      name = input ("new name: ")
-      print("hello, " + name);
+      alert("what would you like to change your name to");
+      name = window.prompt("new name: ");
+      alert("hello, " + name);
     } else if (response == "hello") {
       alert("hi");
     } else if (response == "how do you spell your name") {
@@ -92,7 +90,7 @@ function startAI() {
       nxts = 1;
       while (response.substr(nxt, nxts) != ("")) {
         nxt = nxt + 1;
-        nxts = nxts + 1
+        nxts = nxts + 1;
       }
       ups = tco;
       ups = response.substr(5, nxt);
@@ -100,7 +98,7 @@ function startAI() {
       tikr = (iam);
       alert(ups);
     } else if (commands.frequencies(response) == 1) {
-      spot = commands.index (response);
+      spot = commands.findIndex(response);
       alert(action[spot]);
     } else if (response.substr(0, 2) == "my") { 
       nxt = 0;
@@ -111,24 +109,24 @@ function startAI() {
         dk = nxts;
       }
       jb = nxt;
-      cmld = response.substr(3, nxt)
-      nxts = nxt + 11
+      cmld = response.substr(3, nxt);
+      nxts = nxt + 11;
       if (response.substr(nxt + 4, nxts - 2) == "named") {
         dilk = nxts - 1;
         nxt = nxt + 0;
         nxts = nxts + 1;
         while (response.substr(nxt, nxts) != "") {
-          nxt = nxt + 1
-          nxts = nxts + 1
+          nxt = nxt + 1;
+          nxts = nxts + 1;
         }
-        action.push("your " + cmld)      
-        commands.push("who is " + response[dilk:nxts])
+        action.push("your " + cmld);
+        commands.push("who is " + response.substr(dilk, nxts));
       } else {
-        nxt = 0
-        nxts = 1
+        nxt = 0;
+        nxts = 1;
         while (response.substr(nxt, nxts) != "") {
-          nxt = nxt + 1
-          nxts = nxts + 1
+          nxt = nxt + 1;
+          nxts = nxts + 1;
         }
         commands.push("what is " + response.substr(0, jb));
         action.push(response.substr(dk, nxt));
@@ -136,13 +134,13 @@ function startAI() {
     } else {
       alert("I dont understand, would you like to add this as a new command?");
       command = response;
-      response = window.prompt("yes or no ");
+      response = window.prompt("yes or no");
     }
 
     if (response == "yes") {
-      commands.append(command)
-      actionk = console.prompt("what should i say in response? ");
-      action.append(actionk);
+      commands.push(command)
+      actionk = window.prompt("what should i say in response? ");
+      action.push(actionk);
     }
   }
 }
